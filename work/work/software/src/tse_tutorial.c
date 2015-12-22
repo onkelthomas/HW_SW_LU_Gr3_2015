@@ -54,7 +54,7 @@ int main(void)
 	while ( IORD_32DIRECT(TSE_BASE, 0x80*4) & 0x8000);	 
 	 
 	// Enable read and write transfers, gigabit Ethernet operation, and CRC forwarding
-	IOWR_ALTERA_TSEMAC_CMD_CONFIG(TSE_BASE, IORD_ALTERA_TSEMAC_CMD_CONFIG(TSE_BASE) | 0x0000004B);
+	IOWR_ALTERA_TSEMAC_CMD_CONFIG(TSE_BASE, IORD_ALTERA_TSEMAC_CMD_CONFIG(TSE_BASE) | 0x00000042);
 	
 	// Initialize display
 	display_init();
